@@ -1,0 +1,49 @@
+<!-- order-header -->
+<template name="order-header">
+  <view class='template'>
+    <view class="item-header flexible">
+      <view class='item-text'>
+        <view>编号:{{item.order_number}}</view>
+      </view>
+      <view class='flexible'>
+        <view class="main-label danger-bg" wx:if="{{item.order_status==0}}">未确定</view>
+        <view class="main-label primary-bg" wx:elif="{{item.order_status==1}}">已确定</view>
+        <view class="main-label define-bg" wx:elif="{{item.order_status==2}}">已取消</view>
+        <view class="main-label danger-bg" wx:elif="{{item.order_status==3}}">无效</view>
+        <view class="main-label define-bg" wx:elif="{{item.order_status==4}}">退货</view>
+        <view class="main-label define-bg" wx:elif="{{item.order_status==5}}">已分单</view>
+        <view class="main-label define-bg" wx:elif="{{item.order_status==6}}">部分分单</view>
+
+        <view class="main-label define-bg" wx:if="{{item.pay_status==0}}">未付款</view>
+        <view class="main-label primary-bg" wx:elif="{{item.pay_status==1}}">部分付款</view>
+        <view class="main-label info-bg"  wx:elif="{{item.pay_status==2}}">已付款</view>
+
+        <view class="main-label define-bg" wx:if="{{item.shipping_status==0}}">未发货</view>
+        <view class="main-label primary-bg" wx:elif="{{item.shipping_status==1}}">已发货</view>
+        <view class="main-label primary-bg" wx:elif="{{item.shipping_status==2}}">已收货</view>
+        <view class="main-label define-bg" wx:elif="{{item.shipping_status==3}}">备货中</view>
+      </view>
+    </view>
+  </view>
+</template>
+<!-- order-content -->
+<template name="order-content">
+  <view class='template'>
+    <view class='flexible-stretch'>
+      <view class='col-1'>
+        <view class='item-body justify-center' wx:for="{{list}}" wx:key="{{index}}" wx:for-item="goods">
+          <image src='{{goods.image}}' mode='aspectFill' class='item-image'></image>
+          <view class='item-info'>
+            <view class='one-line'>{{goods.brand}} {{goods.name}}</view>
+            <view class='one-line'>{{goods.color}}，{{goods.size}}</view>
+            <view class='item-info-price align-justify'>
+              <text>￥{{goods.price}}</text>
+              <text class='item-info-num'>*{{goods.num||0}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='iconfont icon-right justify-center'></view>
+    </view>
+  </view>
+</template>

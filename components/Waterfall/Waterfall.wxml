@@ -1,0 +1,19 @@
+<template name='item'>
+  <navigator url='{{navigator}}?id={{item.id||0}}' class='waterfall-item'>
+    <image class='waterfall-image' mode='widthFix' src='{{item.image}}'></image>
+    <view class='waterfall-content'>
+      <text class='waterfall-title one-line' wx:if='{{item.brand}}'>{{item.brand}}</text>
+      <text class='waterfall-text ellipsis-two' wx:if='{{item.name}}'>{{item.name}}</text>
+      <text class='waterfall-price' wx:if='{{item.price}}'>${{item.price}}</text>
+    </view>
+  </navigator>
+</template>
+  
+  <view class='waterfall'>
+    <view class='waterfall-left'>
+      <template is='item' data='{{navigator, item:item}}' wx:for='{{left_list}}' wx:key='{{index}}' />
+    </view>
+    <view class='waterfall-right'>
+      <template is='item' data='{{navigator, item:item}}' wx:for='{{right_list}}' wx:key='{{index}}' />
+    </view>
+  </view>

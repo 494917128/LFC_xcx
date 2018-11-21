@@ -1,0 +1,27 @@
+<view class='index-container'>
+  <!-- <view class="title">
+    <image src='/images/classify_0.png' mode='aspectFit' class='title-image'></image>
+  </view> -->
+
+  <swiper indicator-dots indicator-color="rgba(255,255,255,0.3)" indicator-active-color="#fff" class="swiper">
+    <swiper-item wx:for="{{swiper_image}}" wx:key="{{index}}">
+      <image class='swiper-image' src='{{item}}' mode='aspectFill'></image>
+    </swiper-item>
+  </swiper>
+
+  <view class='item' wx:for="{{page_data}}" wx:key="{{index}}">
+    <view class='item-title'>{{item.title}}</view>
+    <navigator url='/pages/product/product?id={{item.content.id}}'>
+      <image class='item-image' src='{{item.content.image}}' mode='aspectFit'></image>
+    </navigator>
+    <scroll-view scroll-x class='item-scroll flexible'>
+      <navigator url='/pages/product/product?id={{item.id}}' class='item-scroll-item' wx:for="{{item.list}}" wx:key="{{index}}">
+        <image class='item-scroll-image' src='{{item.image}}' mode='aspectFill'></image>
+        <text class='item-scroll-text one-line'>{{item.brand}} {{item.name}}</text>
+      </navigator>
+    </scroll-view>
+  </view>
+
+</view>
+
+<MySong />

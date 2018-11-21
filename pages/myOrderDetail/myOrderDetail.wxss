@@ -1,0 +1,52 @@
+@import '../myOrder/myOrder.wxss';
+
+.icon-right.iconfont{
+  border: none;
+}
+.order-container{
+  padding-bottom: 120rpx;
+}
+
+
+.margin-top{
+  margin-top: 30rpx;
+}
+
+.order-container .item-title{
+  font-size: 28rpx;
+  line-height: 1;
+  color: #666;
+  margin: 70rpx 30rpx 20rpx;
+}
+
+.order-container .item-allprice{
+  background-color: #fff;
+  margin-right: 30rpx;
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  height: 48rpx;
+}
+
+.order-container .item-remark{
+  margin-right: 30rpx;
+  font-size: 28rpx;
+  margin: 20rpx 0;
+  min-height: 80rpx;
+}
+.order-container .item-remark .title{
+  color: #666;
+  flex-shrink: 0;
+}
+.order-container .item-remark .text{
+  color: #999;
+}
+
+.order-container .item-footer{
+  justify-content: flex-end;
+  border-top: 3rpx solid #dcdcdc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80rpx;
+}

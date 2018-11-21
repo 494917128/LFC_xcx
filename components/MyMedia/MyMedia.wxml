@@ -1,0 +1,49 @@
+  <view class='MyMedia-container'>
+    <view class='item-header flexible'>
+      <image src='{{item.photo||"/images/default.png"}}' mode='aspectFill' class='item-photo'></image>
+      <view class='one-line'>
+        <view class='item-name one-line'>{{item.name}}</view>
+        <view class='item-time'>{{item.add_time}}</view>
+      </view>
+    </view>
+
+    <image src='{{item.images[0]}}' class='item-image' mode='widthFix' wx:if='{{item.images.length==1}}'></image>
+    <swiper class='item-swiper' indicator-dots autoplay wx:if='{{item.images.length>1}}'>
+      <swiper-item wx:for='{{item.images}}' wx:key='{{index}}'>
+        <image src='{{item}}' class='item-image' mode='aspectFill'></image>
+      </swiper-item>
+    </swiper>
+    <block wx:if='{{item.video}}'>
+      <view class='video-poster'  bindtap='navigator' data-id='{{item.id}}' wx:if='{{index||index===0}}'>
+        <image src='{{item.video_poster}}' class='item-swiper' mode='aspectFill'></image>
+        <view class='iconfont icon-icon- justify-center'></view>
+      </view>
+      <video src='{{item.video}}' autoplay poster='{{item.video_poster}}' class='item-swiper' wx:else></video>
+    </block>
+    
+    <view class='item-content'>
+      <view class='item-icon align-justify'>
+        <view class='flexible'>
+          <view bindtap='like' data-id='{{item.id}}' class='iconfont {{item.is_like?"icon-home_ico_like-":"icon-like"}}' hover-class='btn-hover'></view>
+          <navigator url='/pages/mediaDetail/mediaDetail?id={{item.id}}&index={{index}}' hover-class='btn-hover' class='iconfont icon-comment-pen' wx:if='{{index||index===0}}'></navigator>
+          <button open-type='share' data-id='1' class='share iconfont icon-fenxiang'></button>
+        </view>
+        <view bindtap='collect' class='iconfont {{item.is_collect?"icon-shoucang1":"icon-shoucang"}}' hover-class='btn-hover'></view>
+      </view>
+      <!-- tab页可以点击跳转到详情页 -->
+      <view bindtap='{{index||index===0?"navigator":""}}' data-id='{{item.id}}'>
+        <view class='item-name ellipsis-two' wx:if='{{item.like_num}}'>共{{item.like_num}}位用户赞了</view>
+        <view class='item-text {{index||index===0?"ellipsis-three":""}}'>{{item.text}}</view>
+        <view class='item-comment-num' wx:if='{{item.comment_num}}'>共{{item.comment_num}}条评论</view>
+
+        <!-- tab页显示 -->
+        <view class='item-comment' wx:if='{{index||index===0}}'>
+          <view class='item-comment-item one-line' wx:for='{{item.comment}}' wx:key='{{index}}'>
+            <text class='item-name'>{{item.name}}: </text>
+            <text class='item-text'>{{item.text}}</text>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>

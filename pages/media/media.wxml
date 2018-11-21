@@ -1,0 +1,10 @@
+<view class='media-container'>
+  <view class='search flexible'>
+    <view class='iconfont icon-search justify-center'></view>
+    <input placeholder='搜索商品' type='text' confirm-type='search' class='search-input' value='{{search_value}}' bindinput='searchValue' />
+  </view>
+
+  <MyMedia item='{{item}}' index='{{index}}' data-index='{{index}}' bindLike='like' bindCollect='collect' wx:for='{{list}}' wx:key='{{index}}' />
+</view>
+
+<MySong top='100' black />

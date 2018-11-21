@@ -1,0 +1,60 @@
+<!-- 
+<view class="login-logo justify-center">
+  <image src='/images/logo/classify1.jpg' mode='aspectFill' class='login-logo-image'></image>
+  <view class='login-cover'></view>
+</view>
+
+<view class='login-input-view justify-center'>
+  <view class='iconfont icon-shouji-copy'></view>
+  <input class='login-input' type='number' placeholder-class='input-placeholder' placeholder='输入已购手机号' bindinput='inputValue' data-type='phone'></input>
+</view>
+<view class='login-input-view justify-center'>
+  <view class='iconfont icon-icon-test'></view>
+  <input class='login-input' type='password' placeholder-class='input-placeholder' placeholder='输入登入密码' bindinput='inputValue' bindconfirm="binding" data-type='password'></input>
+</view>
+
+<view class='login-button-view'>
+  <button class='login-button main-btn justify-center' bindtap='binding'>立即登录</button>
+  <button class='login-button main-btn justify-center' bindtap='wechatLogin'>微信登录</button>
+</view> -->
+
+<MyOpenSetting show="{{get_userinfo}}" bind_getUserInfo="getUserInfo" type="getUserInfo" />
+
+
+<image style='width:100vw;height:100vh;' src='/images/index_bg.jpg' mode='aspectFill'></image>
+
+  <!-- 手机号 -->
+  <modal wx:if="{{modal_type==1}}" title="登录/注册" confirm-text="下一步" no-cancel bindcancel="" bindconfirm="next">
+    <view class='main-modal flexible-stretch'>
+      <view class='modal-icon iconfont icon-shouji-copy justify-center'></view>
+      <view class='modal-title {{modal_focus||phone?"":"active"}}'>您的手机号码</view>
+      <input value='{{phone}}' focus cursor-spacing='70' type='number' class='modal-input' data-type="phone" bindinput='modalInput' bindfocus='modalFocus' bindblur='modalBlur' bindconfirm='next'></input>
+    </view>
+  </modal>
+  <!-- 验证码 -->
+  <modal wx:if="{{modal_type==2}}" title="短信验证码" confirm-text="" no-cancel>
+    <view class='main-modal flexible-stretch' style='margin-top:0'>
+      <view class='modal-prompt'>验证码已发送至{{phone}}</view>
+      <view class='justify-center'>
+        <input type='number' focus='{{modal_type==2}}' maxlength='4' cursor-spacing='60' class='modal-code' bindinput='modalCode'>
+        </input>
+      </view>
+      <view class='modal-prompt' wx:if='{{count_down}}'>{{count_down||0}}秒后重新获取</view>
+      <view class='modal-prompt' bindtap='sendCode' wx:else>点击获取验证码</view>
+    </view>
+  </modal>
+  <!-- 密码 -->
+  <modal wx:if="{{modal_type==3}}" title="输入密码" confirm-text="确定" no-cancel bindcancel="" bindconfirm="finish">
+    <view class='modal-prompt justify-center'>账号：{{phone}}</view>
+    <view class='main-modal flexible-stretch'>
+      <view class='modal-icon iconfont icon-icon-test justify-center'></view>
+      <view class='modal-title {{modal_focus||password?"":"active"}}'>输入您的密码</view>
+      <input value='{{password}}' focus cursor-spacing='70' type='password' class='modal-input' data-type="password" bindinput='modalInput' bindfocus='modalFocus' bindblur='modalBlur'></input>
+    </view>
+  </modal>
+  <!-- 完成 -->
+  <modal wx:if="{{modal_type==4}}" title="登录/注册" confirm-text="确定" no-cancel bindcancel="" bindconfirm="done">
+    <view class='main-modal justify-center'>
+      恭喜你完成注册
+    </view>
+  </modal>

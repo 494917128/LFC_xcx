@@ -1,0 +1,37 @@
+<view class='binding-container'>
+  <view class='info justify-center'>
+    <image src='{{photo}}' class='photo'></image>
+    <view class='name'>{{name}}</view>
+  </view>
+
+  <view class='input-view flexible'>
+    <text class='input-text'><text class='letter-space'>手机</text>号：</text>
+    <input placeholder='请输入手机号' type='number' class='input col-1' bindinput='inputValue' data-type='phone'></input>
+  </view>
+  <view class='input-view flexible'>
+    <text class='input-text'><text class='letter-space'>验证</text>码：</text>
+    <input placeholder='请输入验证码' type='number' class='input col-1' bindinput='inputValue' data-type='code'></input>
+    <view class='input-text get-code' wx:if='{{count_down}}'>{{count_down||0}}秒</view>
+    <view class='input-text get-code' bindtap='sendCode' wx:else>获取验证码</view>
+    
+  </view>
+  <view class='input-view flexible'>
+    <text class='input-text'>
+      <text wx:if='{{type=="forget"}}'>
+        <text class='letter-space'>新密</text>码：
+      </text>
+      <text wx:else>密　　码：</text>
+    </text>
+    <input placeholder='请输入密码' type='password' class='input col-1' bindinput='inputValue' data-type='password'></input>
+  </view>
+  <view class='input-view flexible'>
+    <text class='input-text'>确认密码：</text>
+    <input placeholder='请再次输入密码' type='password' class='input col-1' bindinput='inputValue' data-type='password_sure'></input>
+  </view>
+
+  <navigator url='/pages/myRegister/myRegister' class='prompt'>
+    <text>已有账号，立即绑定>></text>
+  </navigator>
+
+  <button class='main-btn'>{{type=="forget"?"修改密码":"注册"}}</button>
+</view>

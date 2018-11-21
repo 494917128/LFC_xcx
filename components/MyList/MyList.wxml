@@ -1,0 +1,20 @@
+<view class='MyList'>
+  <view class='item flexible' wx:for='{{list}}' wx:key='{{index}}'>
+    <view class='item-title'>{{item.title}}</view>
+    <!-- 头像 -->
+    <view class='item-text' bindtap='updatePhoto' wx:if='{{item.name=="photo"}}'>
+      <image src='{{item.content}}' mode='aspectFill' class='item-photo'></image>
+    </view>
+    <!-- 密码 -->
+    <view bindtap='updatePassword' class='item-text' wx:elif='{{item.name=="password"}}'>******</view>
+    <!-- 选择地址 -->
+    <picker mode="region" class='item-text' bindchange="regionChange" value="{{item.content}}" wx:elif='{{item.name=="address"}}'>
+      {{item.content[0]}}，{{item.content[1]}}，{{item.content[2]}}
+    </picker>
+    <!-- 输入框 -->
+    <input type='{{item.input_type||"text"}}' disabled='{{item.disabled}}' bindinput='valueChange' data-name='{{item.name}}' placeholder='请输入{{item.title}}' value='{{item.content}}' class='item-text one-line' wx:else></input>
+    <!-- 只在头像的时候显示箭头 -->
+    <view class='iconfont icon-right' wx:if='{{item.name=="photo"||item.name=="password"}}'></view>
+  </view>
+</view>
+  

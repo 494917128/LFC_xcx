@@ -1,0 +1,10 @@
+@import '/pages/myInfoBinding/myInfoBinding';
+
+.binding-container .letter-space{
+  letter-spacing: 14rpx;
+}
+.binding-container .get-code{
+  padding: 0 30rpx;
+  border-left: 1px solid #1BB287;
+  color: #1BB287;
+}

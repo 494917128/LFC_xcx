@@ -1,0 +1,56 @@
+.media-container .item-header{
+  padding: 20rpx;
+}
+.media-container .item-photo{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 20rpx;
+}
+.media-container .item-name{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.media-container .item-time{
+  font-size: 28rpx;
+}
+
+.media-container .comment-content{
+  padding-top: 20rpx;
+  padding-bottom: 100rpx;
+}
+.media-container .comment-text{
+  margin-left: 110rpx;
+  margin-bottom: 20rpx;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+}
+.media-container .comment-again{
+  background-color: #F7F7F7;
+  padding: 10rpx 20rpx;
+}
+.media-container .comment-again-text{
+  padding: 10rpx 0;
+}
+
+.media-container .comment{
+  height: 100rpx;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 0 4rpx #dcdcdc;
+}
+.media-container .comment-input{
+  flex: 1;
+  height: 100%;
+  padding-left: 32rpx;
+  font-size: 32rpx;
+}
+.media-container .comment-button{
+  margin: 0 20rpx;
+  border-radius: 10rpx;
+}

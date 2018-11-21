@@ -1,0 +1,5 @@
+  <view class='nav flexible'>
+    <view class='nav-item {{index==nav_index?"active":""}}' wx:for='{{nav_list}}' wx:key='{{index}}' bindtap='navbar' data-index='{{index}}'>
+      <text class='nav-item-text justify-center'>{{item}}</text>
+    </view>
+  </view>

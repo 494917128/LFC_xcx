@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "品牌详情",
+  "usingComponents": {
+    "MySong": "/components/MySong/MySong",
+    "MyNav": "/components/MyNav/MyNav",
+    "Waterfall": "/components/Waterfall/Waterfall"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": 40
+}

@@ -1,0 +1,45 @@
+.address-container {
+  background-color: #F7F7F7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.address-container .item {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.address-container .item-body {
+  padding: 10rpx;
+}
+.address-container .item-text {
+  font-size: 28rpx;
+  margin: 14rpx 0;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.address-container .item-desc {
+  color: #999;
+  font-size: 24rpx;
+}
+.address-container .item-footer {
+  justify-content: space-between;
+  padding: 0 24rpx;
+  font-size: 24rpx;
+  border-top: 1px solid #F7F7F7;
+  height: 70rpx;
+  color: #999;
+}
+.address-container radio {
+  margin-right: 14rpx;
+}
+.address-container .item-label {
+  padding: 0 16rpx;
+}
+.address-container .item-label .iconfont {
+  padding: 0 14rpx;
+}
+
+.address-container .main-btn {
+  margin: 70rpx 80rpx;
+}

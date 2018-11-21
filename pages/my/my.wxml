@@ -1,0 +1,16 @@
+<view class='my-container'>
+  <image src='/images/index_bg.jpg' mode='aspectFill' class='image'></image>
+
+  <view class='content flexible'>
+    <navigator url='/pages/myOrder/myOrder' class='item'><text class='iconfont icon-dingdan'></text>订单管理</navigator>
+    <navigator url='/pages/myAddress/myAddress' class='item'><text class='iconfont icon-dizhikong'></text>收货地址</navigator>
+    <navigator url='/pages/myInfo/myInfo' class='item'><text class='iconfont icon-wode'></text>个人资料</navigator>
+  </view>
+  <view class='content flexible'>
+    <navigator url='/pages/service/service' class='item'><text class='iconfont icon-kefu'></text>客服中心</navigator>
+    <navigator url='/pages/myCollect/myCollect' class='item'><text class='iconfont icon-shoucang'></text>收藏</navigator>
+    <navigator url='/pages/mySong/mySong' class='item'><text class='iconfont icon-icon-'></text>歌单</navigator>
+  </view>
+</view>
+
+<MySong />

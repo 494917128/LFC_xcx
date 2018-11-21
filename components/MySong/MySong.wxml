@@ -1,0 +1,1 @@
+<view style='top:{{top+"rpx"}}' class='{{is_play?"active":"not-active"}} {{black?"black":""}} iconfont icon-icon- justify-center' bindtap='song'></view>

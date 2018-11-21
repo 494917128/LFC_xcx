@@ -1,0 +1,10 @@
+<view class='song-container'>
+  <view class='item flexible' bindtap='audio' data-index='{{index}}' wx:for='{{9}}' wx:key='{{index}}'>
+    <view class='num'>{{index+1}}</view>
+    <view class='col-1'>
+      <view class='name'>歌曲名</view>
+      <view class='singer'>歌手</view>
+    </view>
+    <view class='{{is_play?"active":"not-active"}} iconfont icon-icon- justify-center' wx:if='{{index==play_index}}'></view>
+  </view>
+</view>

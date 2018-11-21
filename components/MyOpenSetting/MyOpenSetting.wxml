@@ -1,0 +1,13 @@
+<view class='cover justify-center {{show?"show":""}}' bindtap='cover'>
+  <view class='container' catchtap='stop'>
+    <view class='title justify-center'>请授权</view>
+    <view class='content'>
+      <view wx:if="{{type=='getUserInfo'}}" class='content-text'>获取您的公开信息（昵称、头像等）</view>
+      <view wx:else class='content-text'>需要授权才能继续使用</view>
+    </view>
+    <view class='button-view justify-center'>
+      <button open-type='getUserInfo' wx:if="{{type=='getUserInfo'}}" bindgetuserinfo='getUserInfo' bindtap='confirm' class='button justify-center' hover-class='hover'>点击授权</button>
+      <button open-type='openSetting' wx:else bindtap='confirm' class='button justify-center' hover-class='hover'>点击授权</button>
+    </view>
+  </view>
+</view>

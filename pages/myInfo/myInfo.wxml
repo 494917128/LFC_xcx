@@ -1,0 +1,25 @@
+<view class='myInfo-container'>
+  <MyList list='{{list}}' bindInput='valueChange' bindPhoto='updatePhoto' bindPassword='updatePassword' />
+
+  <button class='main-btn'>确认提交</button>
+</view>
+
+<!-- <modal wx:if="{{modal_show}}" title="修改密码" bindcancel="modalCancel" bindconfirm="modalConfirm">
+  <view class='main-modal justify-center'>
+    <input type></input>
+  </view>
+</modal> -->
+<modal wx:if="{{modal_type==1}}" title="输入密码" confirm-text="确定" bindcancel="modalCancel" bindconfirm="modalConfirm">
+  <view class='modal-prompt justify-center'>账号：{{mobile}}</view>
+  <view class='main-modal flexible-stretch'>
+    <view class='modal-icon iconfont icon-icon-test justify-center'></view>
+    <view class='modal-title {{modal_focus||old_password?"":"active"}}'>输入您的原密码</view>
+    <input value='{{old_password}}' focus cursor-spacing='70' type='password' class='modal-input' data-type="old_password" data-name='modal_focus' bindinput='modalInput' bindfocus='modalFocus' bindblur='modalBlur'></input>
+    <view class='new-password'>
+      <view class='modal-title {{modal_focus2||new_password?"":"active"}}'>输入您的新密码</view>
+      <input value='{{new_password}}' cursor-spacing='70' type='password' class='modal-input' data-type="new_password" data-name='modal_focus2' bindinput='modalInput' bindfocus='modalFocus' bindblur='modalBlur'></input>
+    </view>
+  </view>
+</modal>
+
+<MySong black />

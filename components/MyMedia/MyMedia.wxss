@@ -1,0 +1,75 @@
+@import '/fonts/iconfont.wxss';
+@import '/app.wxss';
+
+.MyMedia-container{
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.MyMedia-container .item-header{
+  padding: 20rpx;
+}
+.MyMedia-container .item-photo{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 20rpx;
+}
+.MyMedia-container .item-name{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.MyMedia-container .item-time{
+  font-size: 28rpx;
+}
+
+.MyMedia-container .item-content{
+  padding: 0 30rpx;
+}
+.MyMedia-container .item-icon{
+  margin: 0 -16rpx;
+}
+.MyMedia-container .item-icon .iconfont {
+  font-size: 48rpx;
+  line-height: 1;
+  padding: 16rpx;
+}
+.MyMedia-container .item-icon .icon-home_ico_like-,.MyMedia-container .item-icon .icon-shoucang1 {
+  color: #B4B5B0;
+}
+.MyMedia-container .item-icon .share {
+  border: none;
+  background-color: transparent;
+}
+.MyMedia-container .item-icon .share::after {
+  content: none;
+}
+.MyMedia-container .item-swiper{
+  width: 100%;
+  height: 500rpx;
+}
+.MyMedia-container .item-image{
+  width: 100%;
+  height: 100%;
+}
+.MyMedia-container .video-poster{
+  position: relative;
+}
+.MyMedia-container .video-poster .iconfont{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 80rpx;
+}
+.MyMedia-container .item-text{
+  font-size: 26rpx;
+  margin: 10rpx 0;
+}
+.MyMedia-container .item-comment-num{
+  font-size: 28rpx;
+  color: #999;
+}

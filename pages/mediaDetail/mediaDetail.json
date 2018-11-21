@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "媒体详情",
+  "usingComponents": {
+    "MySong": "/components/MySong/MySong",
+    "MyMedia": "/components/MyMedia/MyMedia"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": 40
+}

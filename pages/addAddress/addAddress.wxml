@@ -1,0 +1,4 @@
+<view class='addAddress-container'>
+  <MyList list='{{list}}' bindInput='valueChange' bindRegionChange='regionChange' />
+  <button class='main-btn' bindtap='submit'>确认提交</button>
+</view>

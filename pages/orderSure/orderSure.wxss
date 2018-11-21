@@ -1,0 +1,6 @@
+@import '../myOrderDetail/myOrderDetail.wxss';
+
+.order-container .btn-submit{
+  width: 80%;
+  margin: 40rpx auto;
+}

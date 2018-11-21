@@ -1,0 +1,56 @@
+.song-container{
+  padding: 0 30rpx;
+}
+
+.song-container .item{
+  border-bottom: 1px solid #F7F7F7;
+  height: 120rpx;
+}
+.song-container .num{
+  width: 70rpx;
+  padding-right: 10rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+}
+.song-container .name{
+  font-size: 32rpx;
+}
+.song-container .singer{
+  font-size: 28rpx;
+  color: #999;
+}
+
+.icon-icon-{
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 40rpx;
+  opacity: .3;
+  z-index: 11;
+}
+
+.song-container .iconfont.active{
+  transform: rotate(360deg);
+  animation: myrotate 5s linear infinite;
+}
+@keyframes myrotate {
+  from { transform: rotate(0deg); }
+  top { transform: rotate(360deg); }
+}
+.song-container .iconfont.not-active::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  margin: auto;
+  background-color: #999;
+  transform: rotate(45deg);
+}

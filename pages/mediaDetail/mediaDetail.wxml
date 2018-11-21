@@ -1,0 +1,29 @@
+<view class='media-container'>
+  <MyMedia item='{{page_data}}' bindLike='like' bindCollect='collect' type='2' />
+  <view class='comment-content'>
+    <block wx:for='{{list}}' wx:key='{{index}}'>
+      <view bindtap='commentAgain' data-id='{{item.id}}' data-name='{{item.name}}' data-index='{{index}}'>
+        <view class='item-header flexible'>
+          <image src='{{item.photo||"/images/default.png"}}' mode='aspectFill' class='item-photo'></image>
+          <view class='one-line'>
+            <view class='item-name one-line'>{{item.name}}</view>
+            <view class='item-time'>{{item.add_time}}</view>
+          </view>
+        </view>
+        <view class='comment-text'>{{item.text}}</view>
+      </view>
+      <navigator url='/pages/mediaComment/mediaComment?id={{item.id}}&name={{item.name}}&photo={{item.photo}}&add_time={{item.add_time}}&text={{item.text}}' class='comment-text comment-again' wx:if='{{item.comment.list.length}}'>
+        <view class='comment-again-text' wx:for='{{item.comment.list}}' wx:key='{{index}}'>{{item.name}}: {{item.text}}</view>
+        <view wx:if='{{item.comment.page.page<item.comment.page.TotalPage}}'>点击查看更多...</view>
+      </navigator>
+    </block>
+  </view>
+
+  <view class='comment flexible'>
+    <input class='comment-input' confirm-type='send' placeholder='回复...' value='{{(comment_again_name?"回复 @"+comment_again_name+"：":"")+comment_input}}' bindinput='commentInput' bindconfirm='commentSubmit' focus='{{comment_focus}}' />
+    <view class='main-btn comment-button' bindtap='commentSubmit'>发送</view>
+  </view>
+
+</view>
+
+<MySong black />

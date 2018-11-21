@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "MyList": "/components/MyList/MyList"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTitleText": "地址编辑",
+  "navigationBarTextStyle": "white"
+}

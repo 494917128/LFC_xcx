@@ -1,0 +1,145 @@
+.bag-num {
+  margin: 20rpx 0;
+}
+.bag-num-button {
+  font-weight: bold;
+  height: 50rpx;
+  width: 50rpx;
+  padding: 0 10rpx;
+  border-color: #333;
+}
+.bag-num-input {
+  width: 100rpx;
+  height: 50rpx;
+  border: 1px solid #333;
+  box-shadow: 0 0 4rpx #333;
+  border-radius: 4rpx;
+  font-size: 24rpx;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.main-btn {
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:14px;
+  padding-right:14px;
+  box-sizing:border-box;
+  text-align:center;
+  text-decoration:none;
+  line-height:2.55555556;
+  -webkit-tap-highlight-color:transparent;
+  overflow:hidden;
+  border-radius: 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 30rpx;
+}
+.main-btn:hover,button:hover,.btn-hover {
+  opacity: .7;
+}
+.input-placeholder{
+  color: #bbb;
+}
+.main-label{
+  padding: 8rpx 6rpx;
+  font-size: 24rpx;
+  line-height: 1;
+  border-radius: 6rpx;
+  margin-left: 6rpx;
+}
+.main-modal{
+  color: #000;
+  margin: 20rpx;
+  flex-direction: column;
+  position: relative;
+}
+.main-modal .modal-icon{
+  font-size: 140rpx;
+  line-height: 1;
+  color: #999;
+  padding-bottom: 40rpx;
+}
+.main-modal .modal-title{
+  color: #999;
+  text-align: center;
+  position: absolute;
+  white-space: nowrap;
+  font-size: 26rpx;
+  top: 140rpx;
+  left: 0;
+  right: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  transition: all 0.3s;
+}
+.main-modal .modal-title.active{
+  top: 180rpx;
+  right: 0;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+}
+.main-modal .modal-input{
+  height: 80rpx;
+  border-bottom: 1px solid #dcdcdc;
+}
+.main-modal .modal-prompt{
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+.main-modal .modal-code{
+  height: 100rpx;
+  width: 50%;
+  margin: auto;
+  border: 1px solid #dcdcdc;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  margin-top: 40rpx;
+  margin-bottom: 50rpx;
+}
+
+radio, checkbox{
+  zoom: .85;
+}
+
+
+
+
+
+.primary-bg{
+  color: #ffffff;
+  background-color: #00bcd4;
+}
+.info-bg{
+  color: #ffffff;
+  background-color: #03a9f4;
+}
+.danger-bg{
+  color: #ffffff;
+  background-color: #e51c23;
+}
+.danger-color{
+  color: #e51c23;
+}
+.danger-border{
+  border: 3rpx solid #e51c23;
+}
+.define-bg{
+  color: #666;
+  background-color: #ddd;
+}
+.main-bg{
+  background-color: #03A9F4;
+  color: #fff;
+}
+.main-border{
+  border: 1px solid #03A9F4;
+}

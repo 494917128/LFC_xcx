@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "MySong": "/components/MySong/MySong"
+  },
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTitleText": "地址选择",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": 40
+}

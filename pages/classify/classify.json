@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "MySong": "/components/MySong/MySong",
+    "Waterfall": "/components/Waterfall/Waterfall"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": 40
+}

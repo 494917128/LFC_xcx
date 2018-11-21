@@ -1,0 +1,74 @@
+{
+  "pages":[
+    "pages/login/login",
+    
+    "pages/index/index",
+    
+    "pages/classify/classify",
+    "pages/search/search",
+    "pages/brand/brand",
+    "pages/product/product",
+    
+    "pages/media/media",
+    "pages/mediaDetail/mediaDetail",
+    "pages/mediaComment/mediaComment",
+        
+    "pages/shoppingBag/shoppingBag",
+    "pages/orderSure/orderSure",
+    
+    "pages/my/my",
+    "pages/myOrder/myOrder",
+    "pages/myOrderDetail/myOrderDetail",
+    "pages/myAddress/myAddress",
+    "pages/addAddress/addAddress",
+    "pages/service/service",
+    "pages/myCollect/myCollect",
+    "pages/myInfo/myInfo",
+    "pages/myInfoBinding/myInfoBinding",
+    "pages/myRegister/myRegister",
+    "pages/mySong/mySong"
+    
+  ],
+  "tabBar": {
+    "color": "#ACACAC",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/index.png",
+        "selectedIconPath": "images/icon/index-selected.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "images/icon/classify.png",
+        "selectedIconPath": "images/icon/classify-selected.png"
+      },
+      {
+        "pagePath": "pages/media/media",
+        "text": "媒体",
+        "iconPath": "images/icon/media.png",
+        "selectedIconPath": "images/icon/media-selected.png"
+      },
+      {
+        "pagePath": "pages/shoppingBag/shoppingBag",
+        "text": "购物袋",
+        "iconPath": "images/icon/shopping-bag.png",
+        "selectedIconPath": "images/icon/shopping-bag-selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/icon/account.png",
+        "selectedIconPath": "images/icon/account-selected.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "LIVE FOR COOL",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,62 @@
+.index-container{
+  /* padding-top: 80rpx; */
+}
+
+.index-container .title{
+  height: 80rpx;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+.index-container .title-image{
+  height: 60rpx;
+  width: 100%;
+}
+
+.index-container .swiper{
+  height: 100vh;
+  width: 100%;
+}
+.index-container .swiper-image{
+  height: 100%;
+  width: 100%;
+}
+
+.index-container .item{
+}
+.index-container .item-title{
+  font-size: 36rpx;
+  font-weight: bold;
+  padding: 50rpx 20rpx 30rpx;
+}
+.index-container .item-image{
+  height: 420rpx;
+  width: 100%;
+}
+.index-container .item-scroll{
+  white-space: nowrap;
+}
+.index-container .item-scroll-item{
+  display: inline-flex;
+  flex-direction: column;
+  padding: 20rpx 0;
+  margin-right: 20rpx;
+}
+.index-container .item-scroll-item:last-child{
+  margin-right: 20rpx;
+}
+.index-container .item-scroll-image{
+  width: 250rpx;
+  height: 350rpx;
+}
+.index-container .item-scroll-text{
+  width: 250rpx;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 1.6;
+}

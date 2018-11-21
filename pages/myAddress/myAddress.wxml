@@ -1,0 +1,35 @@
+<view class='address-container'>
+  <radio-group bindchange="addressSelect">
+    <view class='item' wx:for='{{list}}' wx:key='{{index}}'>
+      <view class='item-body'>
+        <view class='flexible'>
+          <text class='item-text one-line'>{{item.contact}}</text>
+          <text class='item-text'>{{item.phone}}</text>
+        </view>
+        <view class='item-text item-desc ellipsis-two'>{{item.prov}}-{{item.city}}-{{item.district}} {{item.desc}}</view>
+      </view>
+      <view class='item-footer flexible-stretch'>
+        <label class='flexible col-1'>
+          <view wx:if='{{select}}'>
+            <radio value="{{index}}" color='#000' checked="{{item.checked}}"/> 
+            选择此地址
+          </view>
+        </label>
+        <view class='flexible-stretch'>
+          <navigator url='/pages/addAddress/addAddress?id={{item.id}}&contact={{item.contact}}&phone={{item.phone}}&prov={{item.prov}}&city={{item.city}}&district={{item.district}}&desc={{item.desc}}' class='item-label flexible'>
+            <view class='iconfont icon-comment-pen'></view>
+            编辑
+          </navigator>
+          <view class='item-label flexible' hover-class='navigator-hover' bindtap='delete' data-id='{{item.id}}' data-index='{{index}}'>
+            <!-- <view class='iconfont icon-delete'></view> -->
+            <view class='iconfont icon-comment-pen'></view>
+            删除
+          </view>
+        </view>
+      </view>
+    </view>
+  </radio-group>
+  <navigator url='/pages/addAddress/addAddress' class='main-btn'>+添加收货地址</navigator>
+</view>
+
+<MySong black />

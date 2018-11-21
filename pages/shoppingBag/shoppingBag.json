@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "MySong": "/components/MySong/MySong"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": 40
+}

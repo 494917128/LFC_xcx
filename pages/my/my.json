@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "MySong": "/components/MySong/MySong"
+  },
+  "navigationBarTitleText": "个人中心"
+}

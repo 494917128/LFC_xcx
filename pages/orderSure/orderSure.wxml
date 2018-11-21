@@ -1,0 +1,38 @@
+<import src="/utils/template.wxml"/>
+
+<view class='order-container flex_column'>
+
+  <view class='item-title'>收货地址</view>
+  <view class='template'>
+    <navigator url='/pages/myAddress/myAddress?select=1&id={{address.id||""}}' class='item-body justify-center'>
+      <view class='item-info' wx:if='{{address.id}}'>
+        <view class='item-info-name flexible'>
+          {{address.contact}}
+        </view>
+        <view>{{address.phone}}</view>
+        <view class='ellipsis-two'>{{address.prov}}-{{address.city}}-{{address.district}} {{address.desc}}</view>
+      </view>
+      <view class='item-info' wx:else>
+        <view class='iconfont icon-dizhikong'></view>
+      </view>
+      <view class='iconfont icon-right justify-center'></view>
+    </navigator>
+  </view>
+
+  <view class='item-title'>订单商品</view>
+  <template is='order-content' data='{{list,image_url}}' />
+
+  <view class='template'>
+    <view class='item-body margin-top'>
+      <view class='item-allprice align-justify'>
+        <text>商品总额</text>
+        <text>￥{{total_price}}</text>
+      </view>
+    </view>
+  </view>
+
+  <button class="btn-submit main-btn" bindtap='orderAdd'>确定订单</button>
+
+</view>
+
+<MySong black />

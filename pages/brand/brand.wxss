@@ -1,0 +1,45 @@
+
+.brand-container .header{
+  border-bottom: 16rpx solid #f2f2f2;
+}
+.brand-container .header-image{
+  height: 420rpx;
+  width: 100%;
+}
+.brand-container .header-title{
+  margin-top: -70rpx;
+  padding: 0 30rpx;  
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.brand-container .header-photo{
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+  border: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  background-color: #fff;
+  flex-shrink: 0;
+}
+.brand-container .header-name{
+  font-size: 28rpx;
+  line-height: 1.8;
+}
+.brand-container .header-text{
+  color: #3D3D3D;
+  width: 100%;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+  margin-top: 10rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.brand-container .header-more {
+  height: 50rpx;
+  transform: rotate(0deg);
+  transition: all .3s;
+}
+.brand-container .header-more.show {
+  transform: rotate(180deg);
+}

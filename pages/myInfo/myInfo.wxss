@@ -1,0 +1,21 @@
+.myInfo-container {
+  padding: 0 40rpx;
+}
+
+.myInfo-container .main-btn {
+  margin: 70rpx 40rpx;
+}
+
+
+.new-password{
+  position: relative;
+}
+.new-password .modal-title{
+  top: 0rpx;
+}
+.new-password .modal-title.active{
+  top: 40rpx;
+}
+.new-password .modal-input{
+  margin-top: 40rpx;
+}

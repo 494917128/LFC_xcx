@@ -1,0 +1,45 @@
+<view class='bag-container'>
+  <checkbox-group bindchange="checkboxSelect" data-index='{{index}}' wx:for='{{list}}' wx:key='{{index}}'>
+    <label class='item'>
+      <view class='item-select'>
+        <view class='col-1 justify-center'>
+          <checkbox color='#000' checked="{{item.checked}}"/>
+        </view>
+      </view>
+      <navigator url='/pages/product/product?id={{item.product_id}}' catchtap='stop'>
+        <image src='{{item.image}}' mode='aspectFill' class='item-image'></image>
+      </navigator>
+      <view class='item-info'>
+        <view class='item-text'>
+          <view>{{item.brand}}</view>
+          <view>{{item.name}}</view>
+        </view>
+        <view class='item-text'>
+          <text class='item-text-item' wx:if='{{item.color}}'>{{item.color}}</text>
+          <text class='item-text-item' wx:if='{{item.size}}'>{{item.size}}</text>
+        </view>
+        <view class='item-text item-price'>￥{{item.price||'0.00'}}</view>
+        <view class='bag-num flexible'>
+          <view class='bag-num-button justify-center' catchtap='numUpdate' data-type='subtract' data-index='{{index}}'>-</view>
+          <view class='bag-num-input justify-center'>{{item.num}}</view>
+          <view class='bag-num-button justify-center' catchtap='numUpdate' data-type='add' data-index='{{index}}'>+</view>
+        </view>
+      </view>
+    </label>
+  </checkbox-group>
+
+  <view class='footer'>
+    <checkbox-group class='footer-select' bindchange="selectAll">
+      <label class='col-1 justify-center'>
+        <checkbox color='#000' checked="{{all_checked}}"/>全选
+      </label>
+    </checkbox-group>
+    <view class='footer-info'>
+      <text>合计({{all_checked_length||0}}): </text>
+      <text class='footer-price'>￥{{total_price}}</text>
+    </view>
+    <view class='footer-button justify-center' bindtap='orderSure'>立即下单</view>
+  </view>
+</view>
+
+<MySong black />

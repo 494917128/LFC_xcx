@@ -1,0 +1,18 @@
+<view class='classify-container'>
+
+  <navigator url='/pages/search/search' class='search flexible'>
+    <view class='iconfont icon-search justify-center'></view>
+    <input placeholder='搜索商品' type='text' confirm-type='search' class='search-input' disabled />
+  </navigator>
+
+  <view class='list flexible'>
+    <view class='item' wx:for='{{list}}' wx:key='{{index}}'>
+      <navigator url='/pages/brand/brand?id={{item.id}}'>
+        <image src='{{item.image}}' class='item-image'></image>
+      </navigator>
+    </view>
+  </view>
+
+</view>
+
+<MySong top='100' black />

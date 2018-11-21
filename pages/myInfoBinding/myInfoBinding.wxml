@@ -1,0 +1,23 @@
+<view class='binding-container'>
+  <view class='info justify-center'>
+    <image src='{{photo}}' class='photo'></image>
+    <view class='name'>{{name}}</view>
+  </view>
+
+  <view class='input-view flexible'>
+    <text class='input-text'>手机号：</text>
+    <input placeholder='请输入手机号' type='number' class='input col-1'></input>
+  </view>
+  <view class='input-view flexible'>
+    <text class='input-text'>密　码：</text>
+    <input placeholder='请输入密码' type='password' class='input col-1'></input>
+  </view>
+  <view class='prompt'>
+    <view>绑定成功后，pc端与小程序端将共享数据</view>
+    <view>pc端网址：http://132.232.15.255</view>
+  </view>
+
+  <button class='main-btn'>绑定</button>
+</view>
+
+<MySong black />

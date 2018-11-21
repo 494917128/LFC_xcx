@@ -1,0 +1,52 @@
+<import src="/utils/template.wxml"/>
+
+<view class='order-container flex_column'>
+
+  <view class='margin-top'>
+    <template is='order-header' data='{{item:order}}' />
+  </view>
+
+  <view class='template'>
+    <view class="item-header flexible" style='padding-top:0;'>
+      <text wx:if="{{order.invoice_no&&order.shipping_name&&order.shipping_id!=1&&order.shipping_id!=7&&shipping_id!=9}}">{{order.shipping_name}}:{{order.invoice_no}}</text>
+      <text wx:if="{{order.shipping_id==1}}">您的货已于{{order.shipping_name}}</text>
+      <text wx:if="{{order.shipping_id==7||order.shipping_id==19}}">您的货已于{{order.shipping_name}}</text>
+    </view>
+  </view>
+
+  <view class='item-title' wx:if='{{order.address}}'>收货地址</view>
+  <view class='template' wx:if='{{order.address}}'>
+    <view class='item-body justify-center'>
+      <view class='item-info'>
+        <view class='item-info-name flexible'>
+          {{order.address.contact}}
+        </view>
+        <view>{{order.address.phone}}</view>
+        <view>{{order.address.prov}}-{{order.address.city}}-{{order.address.district}} {{order.address.desc}}</view>
+      </view>
+      <view class='iconfont icon-right justify-center'></view>
+    </view>
+  </view>
+
+  <view class='item-title'>购买商品</view>
+  <template is='order-content' data='{{list:order.products,image_url}}' />
+
+  <view class='template'>
+    <view class='item-body margin-top'>
+      <view class='item-allprice align-justify'>
+        <text>商品总额</text>
+        <text>￥{{order.totalPrice}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='item-footer flexible'>
+    <view class="flexible">
+      <!-- <view data-src="https://m.kuaidi100.com/index_all.html?callbackurl=&type=工厂发货&postid=123" bindtap='webView' class="item-footer-button main-btn" hover-class='btn-hover'>查看物流</view> -->
+      <view class="item-footer-button main-btn" hover-class='btn-hover' wx:if='{{order.type!=1}}'>确定收货</view>
+    </view>
+  </view>
+
+</view>
+
+<MySong black />

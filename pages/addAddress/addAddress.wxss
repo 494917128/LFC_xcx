@@ -1,0 +1,7 @@
+.addAddress-container {
+  padding: 0 40rpx;
+}
+
+.addAddress-container .main-btn {
+  margin: 70rpx 40rpx;
+}

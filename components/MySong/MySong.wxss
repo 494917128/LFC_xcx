@@ -1,0 +1,42 @@
+@import '/fonts/iconfont.wxss';
+@import '/app.wxss';
+
+.icon-icon-{
+  position: fixed;
+  top: 10rpx;
+  right: 10rpx;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 40rpx;
+  opacity: .3;
+  z-index: 11;
+}
+
+.iconfont.active{
+  transform: rotate(360deg);
+  animation: myrotate 5s linear infinite;
+}
+@keyframes myrotate {
+  from { transform: rotate(0deg); }
+  top { transform: rotate(360deg); }
+}
+.iconfont.not-active::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  margin: auto;
+  background-color: #999;
+  transform: rotate(45deg);
+}
+.iconfont.black{
+  background-color: #000;
+  color: #fff;
+}

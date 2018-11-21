@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "MySong": "/components/MySong/MySong",
+    "MyNav": "/components/MyNav/MyNav"
+  },
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTitleText": "订单列表",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

@@ -1,0 +1,61 @@
+@import '/css/main.wxss';  
+@import '/css/style.wxss';  
+@import '/fonts/iconfont.wxss';  
+
+image{
+  display: block;
+}
+
+.template .item-header{
+  position: relative;
+  padding: 30rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 28rpx;
+  color: #212121;
+  background-color: #fff;
+}
+.template .item-text{
+  line-height: 40rpx;
+}
+.template .item-body{
+  flex: 1;
+  padding-left: 30rpx;
+  border-top: 3rpx solid #F7F7F7;
+  border-bottom: 3rpx solid #F7F7F7;
+  background-color: #fff;
+}
+.template .item-image{
+  width: 160rpx;
+  height: 160rpx;
+  flex-shrink: 0;
+  padding: 20rpx 0;
+  margin-right: 30rpx;
+}
+.template .item-info{
+  align-self: center;
+  color: #333;
+  font-size: 24rpx;
+  padding: 20rpx 0;
+  line-height: 1.8;
+  flex: 1;
+}
+.template .item-info-price{
+  font-weight: bold;
+  font-size: 26rpx;
+}
+.template .item-info-num{
+  font-weight: initial;
+  font-size: 32rpx;
+}
+.template .icon-right.iconfont{
+  flex-shrink: 0;
+  color: #bbb;
+  font-size: 32rpx;
+  width: 60rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-top: 3rpx solid #F7F7F7;
+  border-bottom: 3rpx solid #F7F7F7;
+}

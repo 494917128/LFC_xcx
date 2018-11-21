@@ -1,0 +1,19 @@
+<view class='brand-container'>
+
+  <view class='header'>
+    <image src='{{brand.banner}}' mode='aspectFill' class='header-image'></image>
+    <view class='header-title'>
+      <image src='{{brand.image}}' mode='aspectFill' class='header-photo'></image>
+      <text class='header-name one-line'>{{brand.name}}</text>
+    </view>
+    <view class='header-text {{show_more?"":"ellipsis-three"}}'>{{brand.desc}}</view>
+    <view class='{{show_more?"":"show"}} header-more justify-center iconfont icon-top' bindtap='headerMore'></view>
+  </view>
+
+  <MyNav nav_list='{{nav_list}}' nav_index='{{nav_index}}' bindNavbar='navbar' />
+
+  <!-- 瀑布流 -->
+  <Waterfall list='{{list}}' navigator='/pages/product/product' />
+</view>
+
+<MySong black />

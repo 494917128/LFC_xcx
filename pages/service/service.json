@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "MySong": "/components/MySong/MySong"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTitleText": "服务中心",
+  "navigationBarTextStyle": "white"
+}

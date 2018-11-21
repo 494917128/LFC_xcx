@@ -1,0 +1,51 @@
+.binding-container{
+  background-color: #F7F7F7;
+  min-height: 100vh;
+}
+
+.binding-container .info{
+  height: 320rpx;
+  flex-direction: column;
+}
+.binding-container .photo{
+  height: 180rpx;
+  width: 180rpx;
+  border-radius: 50%;
+}
+.binding-container .name{
+  font-size: 28rpx;
+  padding-top: 30rpx;
+  color: #426e9a;
+}
+
+.binding-container .input-view{
+  background-color: #FFF;
+  height: 100rpx;
+  border-top: 1px solid #F7F7F7;
+}
+.binding-container .input-text{
+  background-color: #FFF;
+  font-size: 32rpx;
+  padding: 0 20rpx;
+  color: #666;
+}
+.binding-container .input{
+  height: 100%;
+  margin-right: 20rpx;
+  font-size: 32rpx;
+}
+.binding-container .prompt{
+  font-size: 24rpx;
+  padding: 0;
+  margin: 20rpx 20rpx;
+  color: #999;
+}
+.binding-container navigator.prompt{
+  color: #426e9a;
+  display: inline-flex;
+  margin-top: 0;
+}
+
+.binding-container .main-btn{
+  margin: 40rpx 110rpx;
+}

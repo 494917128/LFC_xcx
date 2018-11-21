@@ -1,0 +1,64 @@
+.login-logo{
+  height: 750rpx;
+  margin-top: -300rpx;
+  padding-top: 300rpx;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 30rpx 60rpx #FFEFD6;
+  box-sizing: border-box;
+}
+.login-logo-image{
+  width: 300rpx;
+  height: 300rpx;
+}
+.login-cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -30rpx;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 1))
+}
+
+.login-input-view{
+  margin: 30rpx 60rpx 0;
+  background-color: #F3F3F3;
+  height: 100rpx;
+}
+.login-input-view .iconfont{
+  width: 80rpx;
+  text-align: center;
+  color: #999;
+}
+.login-input{
+  font-size: 25rpx;
+  flex: 1;
+}
+.login-code{
+  font-size: 28rpx;
+  width: 200rpx;
+  height: 100%;
+  padding: 0;
+}
+.login-code.active{
+  opacity: 0.7;
+}
+
+.login-button-view{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0;
+}
+.login-button{
+  margin: 30rpx 60rpx;
+  width: 630rpx;
+}
+.login-label{
+  position: fixed;
+  top: 70rpx;
+  right: -25rpx;
+  font-size: 26rpx;
+  height: 60rpx;
+  padding-left: 30rpx;
+  padding-right: 50rpx;
+}

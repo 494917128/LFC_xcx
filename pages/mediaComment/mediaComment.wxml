@@ -1,0 +1,36 @@
+<view class='media-container'>
+  <view class='comment-content'>
+    <!-- 第一重评论 -->
+    <view class='comment-item'>
+      <view class='item-header flexible'>
+        <image src='{{comment.photo||"/images/default.png"}}' mode='aspectFill' class='item-photo'></image>
+        <view class='one-line'>
+          <view class='item-name one-line'>{{comment.name}}</view>
+          <view class='item-time'>{{comment.add_time}}</view>
+        </view>
+      </view>
+      <view class='comment-text'>{{comment.text}}</view>
+    </view>
+    <!-- 第二重评论 -->
+    <block wx:for='{{list}}' wx:key='{{index}}'>
+      <view class='comment-again' bindtap='commentAgain' data-id='{{item.id}}' data-name='{{item.name}}' data-index='{{index}}'>
+        <view class='item-header flexible'>
+          <image src='{{item.photo||"/images/default.png"}}' mode='aspectFill' class='item-photo'></image>
+          <view class='one-line'>
+            <view class='item-name one-line'>{{item.name}}</view>
+            <view class='item-time'>{{item.add_time}}</view>
+          </view>
+        </view>
+        <view class='comment-text'>{{item.text}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class='comment flexible'>
+    <input class='comment-input' placeholder='回复...' bindinput='commentInput' bindconfirm='commentSubmit' value='{{(comment_again_name?"回复 @"+comment_again_name+"：":"")+comment_input}}' focus='{{comment_focus}}' />
+    <view class='main-btn comment-button' bindtap='commentSubmit'>发送</view>
+  </view>
+
+</view>
+
+<MySong black />

@@ -1,0 +1,21 @@
+<view class='service-container'>
+  <view class='title flexible'>您可以通过以下方式联系我们：</view>
+  <view class='flexible'>
+    <button open-type='contact' class='item col-1 justify-center'>
+      <view class='iconfont icon-xiaoxi'></view>
+      <text class='item-title'>咨询客服</text>
+    </button>
+    <view class='item col-1 justify-center' bindtap='call' data-phone='{{"400-000-0000"}}'>
+      <view class='iconfont icon-phone1'></view>
+      <text class='item-title'>全国客服热线</text>
+      <text class='item-text'>400-000-0000</text>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='content-item'>平台客服电话：400-000-0000</view>
+    <view class='content-item'>E-MAIL：12345789@qq.com</view>
+    <view class='content-item'>官网地址：132.232.15.225</view>
+  </view>
+</view>
+
+<MySong black />

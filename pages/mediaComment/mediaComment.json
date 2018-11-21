@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "MySong": "/components/MySong/MySong"
+  },
+  "navigationBarTitleText": "评论详情",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": 40
+}

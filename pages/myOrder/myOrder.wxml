@@ -1,0 +1,29 @@
+<import src="/utils/template.wxml"/>
+
+<view class='order-container'>
+  <MyNav nav_list='{{nav_list}}' nav_index='{{nav_index}}' bindNavbar='navbar' class='MyNav' />
+
+  <view class='list'>
+    <!-- 列表循环 -->
+    <view class='item' wx:for="{{list}}" wx:key="{{index}}">
+      <template is='order-header' data='{{item}}' />
+      <navigator url='/pages/myOrderDetail/myOrderDetail?id=1'>
+        <template is='order-content' data='{{list:item.products,image_url}}' />
+      </navigator>
+      <view class='item-footer'>
+        <view class="item-footer-text">
+          <text>合计{{item.totalPrice}}元</text>
+        </view>
+        <view class="flexible">
+          <!-- <view data-src="https://m.kuaidi100.com/index_all.html?callbackurl=&type=工厂发货&postid=123" bindtap='webView' class="item-footer-button main-btn" hover-class='btn-hover'>查看物流</view> -->
+          <view class="item-footer-button main-btn" hover-class='btn-hover' wx:if='{{item.type!=1}}'>确定收货</view>
+        </view>
+      </view>
+    </view>
+    <!-- 列表无内容 -->
+    <view class='justify-center' wx:if="{{list.length==0&&!loading}}">暂无订单</view>
+  </view>
+
+</view>
+
+<MySong top='90' black />

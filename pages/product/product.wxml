@@ -1,0 +1,70 @@
+<view class='product-container'>
+
+  <swiper indicator-dots indicator-color="rgba(255,255,255,0.3)" indicator-active-color="#fff" class='swiper'>
+    <swiper-item>
+      <image src='{{product.image}}' mode='aspectFill' class='swiper-image' bindtap='previewImage' data-image='{{product.image}}'></image>
+    </swiper-item>
+    <swiper-item wx:for='{{product.detail}}' wx:key='{{index}}'>
+      <image src='{{item}}' mode='aspectFill' class='swiper-image' bindtap='previewImage' data-image='{{item}}'></image>
+    </swiper-item>
+  </swiper>
+
+  <view class='info align-justify'>
+    <view>
+      <view class='name'>{{product.brand}} {{product.name}}</view>
+      <view class='price'>￥{{product.price||'0.00'}}</view>
+    </view>
+    <view class='collect' bindtap='collect'>
+      <view class='iconfont {{product.is_collect?"icon-shoucang1":"icon-shoucang"}}' hover-class='btn-hover'></view>
+      收藏
+    </view>
+  </view>
+
+  <view class='footer flexible-stretch'>
+    <navigator url='/pages/service/service' class='footer-item justify-center'>
+      <view class='iconfont icon-kefu'></view>
+      <text>客服</text>
+    </navigator>
+    <navigator url='/pages/shoppingBag/shoppingBag' open-type='switchTab' class='footer-item justify-center'>
+      <view class='iconfont icon-shopping-bag'></view>
+      <text>购物袋</text>
+    </navigator>
+    <view class='main-btn justify-center bg-gray' bindtap='{{cover_show?"bagAdd":"coverShow"}}'>加入购物袋</view>
+    <view class='main-btn justify-center' bindtap='{{cover_show?"buy":"coverShow"}}'>立即购买</view>
+  </view>
+
+  <view class='cover {{cover_show?"show":""}}' bindtap='coverClose'>
+    <view class='cover-view' catchtap='stop'>
+      <view class='cover-close iconfont icon-close' bindtap='coverClose'>×</view>
+      <view class='flexible'>
+        <image src='{{(select_color||select_color===0)?product.colors[select_color].image:product.image}}' mode='aspectFill' class='cover-image'></image>
+        <view class='cover-name ellipsis-three'>{{product.brand}} {{product.name}}</view>
+      </view>
+      <view class='cover-price-view flexible'>
+        <text class='cover-price'>销售价：￥{{product.price||'0.00'}}</text>
+      </view>
+      <block wx:if='{{product.colors&&product.colors.length}}'>
+        <view class='cover-select-title flexible'>颜色</view>
+        <view class='cover-select-list flexible'>
+          <view class='cover-select-item flexible {{select_color===index?"active":""}}' bindtap='selectColor' data-index='{{index}}' wx:for='{{product.colors}}' wx:key='{{index}}'>{{item.name}}</view>
+        </view>
+      </block>
+      <block wx:if='{{product.sizes&&product.sizes.length}}'>
+        <view class='cover-select-title flexible'>尺码</view>
+        <view class='cover-select-list flexible'>
+          <view class='cover-select-item flexible {{select_size===index?"active":""}}' bindtap='selectSize' data-index='{{index}}' wx:for='{{product.sizes}}' wx:key='{{index}}'>{{item.name}}</view>
+        </view>
+      </block>
+      <view class='flexible'>
+        <view class='cover-select-title flexible'>数量：</view>
+        <view class='bag-num flexible'>
+          <view class='bag-num-button justify-center' catchtap='numUpdate' data-type='subtract'>-</view>
+          <view class='bag-num-input justify-center'>{{num}}</view>
+          <view class='bag-num-button justify-center' catchtap='numUpdate' data-type='add'>+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<MySong black />

@@ -1,0 +1,45 @@
+@import '/fonts/iconfont.wxss';
+@import '/app.wxss';
+
+.waterfall{
+  width: 100%;
+  display: flex;
+  padding: 40rpx 16rpx 0;
+  box-sizing: border-box;
+}
+.waterfall-left,.waterfall-right{
+  width: 50%;
+  padding: 0 16rpx;
+  box-sizing: border-box;
+}
+.waterfall-item{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10rpx #ccc;
+  border-radius: 10rpx;
+  margin-bottom: 32rpx;
+}
+.waterfall-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  padding: 30rpx 16rpx 16rpx;
+  box-sizing: border-box;
+}
+.waterfall-title{
+  font-size: 30rpx;
+}
+.waterfall-text{
+  font-size: 28rpx;
+  color: #999;
+}
+.waterfall-price{
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+.waterfall-image{
+  width: 100%;
+}

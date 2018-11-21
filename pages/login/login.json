@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "MyOpenSetting": "/components/MyOpenSetting/MyOpenSetting"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTitleText": "登录",
+  "navigationBarTextStyle": "white"
+}

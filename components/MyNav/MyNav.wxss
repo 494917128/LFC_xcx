@@ -1,0 +1,24 @@
+@import '/fonts/iconfont.wxss';
+@import '/app.wxss';
+
+.nav{
+  height: 90rpx;
+  width: 100%;
+  align-items: center;
+  background-color: #FFF;
+}
+.nav-item{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  font-size: 32rpx;
+}
+.nav-item-text{
+  font-size: 32rpx;
+  border-bottom: 2px solid transparent;
+}
+.nav-item.active .nav-item-text {
+  border-bottom-color: #545454;
+}
+

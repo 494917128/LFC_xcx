@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "MySong": "/components/MySong/MySong",
+    "MyList": "/components/MyList/MyList"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTitleText": "个人资料",
+  "navigationBarTextStyle": "white"
+}
